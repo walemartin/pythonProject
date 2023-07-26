@@ -1,13 +1,10 @@
-counter = 0
-score_total = 0
-test_score = 0
+# a function is a unit of code that perform a task
 
-while test_score >= 0 and test_score <= 100:
-    test_score = int(input("Enter test score: "))
-    score_total += test_score
-    counter += 1
+def calculate_miles_per_gallon(miles_driven, gallon_used):
+    mpg = miles_driven / gallon_used
+    mpg = round(mpg, 1)
+    return mpg
 
-average_score = round(score_total / counter)
 
-print("Total Score: " + str(score_total))
-print("Average score: " + str(average_score))
+a = calculate_miles_per_gallon(150, 14.56)
+print(a)
