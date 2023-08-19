@@ -1,10 +1,10 @@
-# a function is a unit of code that perform a task
+import temperature,future_value_module
+import random
 
-def calculate_miles_per_gallon(miles_driven, gallon_used):
-    mpg = miles_driven / gallon_used
-    mpg = round(mpg, 1)
-    return mpg
+number=random.randint(-4 , 15)
 
+f=temperature.to_fahrenheit(number)
+print("Temperature is :",f)
+temperature.main()
 
-a = calculate_miles_per_gallon(150, 14.56)
-print(a)
+future_value_module.calculate_future_value(100,12,1)
