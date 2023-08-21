@@ -1,10 +1,7 @@
-import temperature,future_value_module
-import random
+import date_of_birth_calculation as p
 
-number=random.randint(-4 , 15)
+b=p
+print(b)
 
-f=temperature.to_fahrenheit(number)
-print("Temperature is :",f)
-temperature.main()
 
-future_value_module.calculate_future_value(100,12,1)
+
