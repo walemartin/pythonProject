@@ -2,7 +2,7 @@
 from datetime import datetime
 
 
-print("date of birth program")
+#print("date of birth program")
 
 date=datetime.now()
 def calculate_age(birth_date, current_date):
@@ -39,16 +39,17 @@ def get_days_in_month(month, year):
     else:
         return 31
 
+def dob(date_str):
+    #date_str = input("Please enter your date of birth (DD/MM/YYYY): ")
+    birth_date = datetime.strptime(date_str, "%d/%m/%Y").date()
+    # age_calulation=(birth_date.year-date.today().year)
+    # years=age_calulation-birth_date
 
-date_str=input("Please enter your date of birth (DD/MM/YYYY): ")
-birth_date=datetime.strptime(date_str,"%d/%m/%Y").date()
-#age_calulation=(birth_date.year-date.today().year)
-#years=age_calulation-birth_date
-
-# Check if the birth date is valid
-if birth_date <= date.today().date():
-    # Calculate age
-    age_years, age_months, age_days = calculate_age(birth_date, date.today())
-    print(f"Your age is {age_years} years, {age_months} months, and {age_days} days.")
-else:
-    print("Please enter a valid date of birth.")
+    # Check if the birth date is valid
+    if birth_date <= date.today().date():
+        # Calculate age
+        age_years, age_months, age_days = calculate_age(birth_date, date.today())
+        #print(f"Your age is {age_years} years, {age_months} months, and {age_days} days.")
+        return age_years
+    else:
+        raise ValueError("Please enter a valid date of birth (DD/MM/YYYY).")
